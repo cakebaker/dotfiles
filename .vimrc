@@ -41,6 +41,7 @@ set shiftwidth=2  " number of spaces to use when indenting
 set softtabstop=2 " number of spaces that a tab counts for while performing editing operations
 
 set ignorecase " ignore case when searching
+set infercase  " adjust case of match depending on the typed text when doing keyword completion in insert mode
 set smartcase  " ignore case if search pattern is lowercase, case-sensitive otherwise
 set hlsearch   " highlight search terms
 set incsearch  " show search matches as you type
