@@ -25,6 +25,10 @@ filetype plugin indent on " enable file type detection & file type plugins, load
 
 set encoding=utf-8 " use UTF-8 as encoding
 
+set scrolloff=3 " minimal number of screen lines to keep above and below the cursor
+
+set wildmenu " enhanced mode for command-line completion
+
 set smartindent " smart autoindenting when starting a new line
 set autoindent  " should be enabled when using smartindent
 
