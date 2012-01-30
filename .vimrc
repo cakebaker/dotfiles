@@ -17,6 +17,7 @@ Bundle 'LustyExplorer'
 
 " other github repos
 Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-markdown'
 Bundle 'othree/html5.vim'
 " Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'samsonw/vim-task'
