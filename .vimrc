@@ -22,6 +22,7 @@ Bundle 'othree/html5.vim'
 " Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'samsonw/vim-task'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on " enable file type detection & file type plugins, load indent file for specific file types
 
