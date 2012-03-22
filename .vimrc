@@ -73,7 +73,7 @@ nnoremap k gk
 noremap <silent> <buffer> <leader>d :call Toggle_task_status()<CR>
 
 " compile .scss files when saving them
-autocmd BufWritePost,FileWritePost *.scss :silent !compass compile > /dev/null
+autocmd BufWritePost,FileWritePost *.scss :silent !compass compile --quiet
 
 " use 4 spaces for PHP files
 autocmd FileType php setlocal shiftwidth=4 softtabstop=4 tabstop=4
