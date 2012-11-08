@@ -71,6 +71,8 @@ nnoremap <silent> <leader><space> :noh<cr>
 " more natural navigation for wrapped lines
 nnoremap j gj
 nnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
 
 " <leader>-d to toggle tasks
 noremap <silent> <buffer> <leader>d :call Toggle_task_status()<CR>
