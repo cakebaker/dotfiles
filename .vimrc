@@ -83,5 +83,8 @@ autocmd BufWritePost,FileWritePost *.scss :silent !compass compile --quiet
 " use 4 spaces for PHP files
 autocmd FileType php setlocal shiftwidth=4 softtabstop=4 tabstop=4
 
+" enable syntax highlighting for ruby snippets in html files
+autocmd BufRead,BufNewFile *.html set filetype=eruby
+
 " rainbow colored parens for Clojure code
 let g:vimclojure#ParenRainbow=1
