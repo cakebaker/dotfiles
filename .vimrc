@@ -88,3 +88,8 @@ autocmd BufRead,BufNewFile *.html set filetype=eruby
 
 " rainbow colored parens for Clojure code
 let g:vimclojure#ParenRainbow=1
+
+" add WhatSyntax command for debugging syntax files
+if has("user_commands")
+  command -nargs=0 -bar WhatSyntax echomsg synIDattr(synID(line("."),col("."),0),"name") synIDattr(synIDtrans(synID(line("."),col("."),0)),"name") synIDattr(synID(line("."),col("."),1),"name") synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") 
+endif
