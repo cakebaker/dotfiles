@@ -4,27 +4,21 @@ set nocompatible
 filetype off " required for vundle
 
 " setup vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let vundle manage vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " vim-scripts github repos
-Bundle 'rails.vim'
-Bundle 'vimwiki'
-Bundle 'LustyExplorer'
-Bundle 'VimClojure'
+Plugin 'vimwiki'
 
 " other github repos
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-markdown'
-Bundle 'othree/html5.vim'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'samsonw/vim-task'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'scrooloose/syntastic'
-Bundle 'hail2u/vim-css3-syntax'
+Plugin 'tpope/vim-markdown'
+Plugin 'othree/html5.vim'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'hail2u/vim-css3-syntax'
 
 filetype plugin indent on " enable file type detection & file type plugins, load indent file for specific file types
 
