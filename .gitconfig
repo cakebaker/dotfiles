@@ -1,0 +1,7 @@
+[user]
+	email = daniel.hofstetter@42dh.com
+	name = Daniel Hofstetter
+[core]
+	editor = vim
+[push]
+	default = simple
