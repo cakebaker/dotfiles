@@ -20,6 +20,8 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'hail2u/vim-css3-syntax'
 
+call vundle#end()
+
 filetype plugin indent on " enable file type detection & file type plugins, load indent file for specific file types
 
 set encoding=utf-8 " use UTF-8 as encoding
