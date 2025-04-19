@@ -22,9 +22,6 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
--- Syntax-highlighting for '.toml' files
-Plug 'cespare/vim-toml'
-
 vim.call('plug#end')
 
 vim.cmd('colorscheme neon')
