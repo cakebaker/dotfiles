@@ -28,11 +28,16 @@ vim.cmd('colorscheme neon')
 
 vim.cmd('set completeopt=menu,menuone,noselect')
 
-vim.cmd('set number') -- show line numbers
+vim.opt.number = true      -- show line numbers
+vim.opt.signcolumn = 'yes' -- show signcolumn
 
-vim.cmd('set scrolloff=3') -- minimal number of screen lines to keep above and below the cursor
+vim.opt.cursorline = true  -- show which line the cursor is on
+vim.opt.scrolloff = 3      -- minimal number of screen lines to keep above and below the cursor
 
-vim.cmd('set signcolumn=yes') -- show signcolumn
+-- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
+-- instead raise a dialog asking if you wish to save the current file(s)
+-- See `:help 'confirm'`
+vim.opt.confirm = true
 
 vim.cmd('set expandtab')     -- auto expand tabs to spaces
 vim.cmd('set tabstop=2')     -- a tab is two spaces
@@ -82,6 +87,6 @@ vim.cmd('nnoremap <Up> gk')
 
 vim.cmd('set smartindent') -- smart autoindenting when starting a new line
 
-vim.cmd('set ignorecase') -- ignore case when searching
-vim.cmd('set infercase')  -- adjust case of match depending on the typed text when doing keyword completion in insert mode
-vim.cmd('set smartcase')  -- ignore case if search pattern is lowercase, case-sensitive otherwise
+vim.opt.ignorecase = true -- ignore case when searching
+vim.opt.infercase = true  -- adjust case of match depending on the typed text when doing keyword completion in insert mode
+vim.opt.smartcase = true  -- ignore case if search pattern is lowercase, case-sensitive otherwise
