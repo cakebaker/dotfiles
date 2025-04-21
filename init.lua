@@ -31,7 +31,7 @@ vim.cmd('set completeopt=menu,menuone,noselect')
 vim.opt.number = true      -- show line numbers
 vim.opt.signcolumn = 'yes' -- show signcolumn
 
-vim.opt.cursorline = true  -- show which line the cursor is on
+vim.opt.cursorline = true  -- highlight current line
 vim.opt.scrolloff = 3      -- minimal number of screen lines to keep above and below the cursor
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
@@ -39,13 +39,13 @@ vim.opt.scrolloff = 3      -- minimal number of screen lines to keep above and b
 -- See `:help 'confirm'`
 vim.opt.confirm = true
 
-vim.cmd('set expandtab')     -- auto expand tabs to spaces
-vim.cmd('set tabstop=2')     -- a tab is two spaces
-vim.cmd('set shiftwidth=2')  -- number of spaces to use when indenting
-vim.cmd('set softtabstop=2') -- number of spaces that a tab counts for while performing editing operations
+vim.opt.expandtab = true -- auto expand tabs to spaces
+vim.opt.tabstop = 2      -- a tab is two spaces
+vim.opt.shiftwidth = 2   -- number of spaces to use when indenting
+vim.opt.softtabstop = 2  -- number of spaces that a tab counts for while performing editing operations
 
-vim.cmd('set wrap')      -- wrap long lines
-vim.cmd('set linebreak') -- smarter wrapping of long lines
+vim.opt.wrap = true      -- wrap long lines
+vim.opt.linebreak = true -- smarter wrapping of long lines
 
 vim.cmd('set clipboard+=unnamedplus') -- always use system clipboard
 
@@ -85,7 +85,7 @@ vim.cmd('nnoremap k gk')
 vim.cmd('nnoremap <Down> gj')
 vim.cmd('nnoremap <Up> gk')
 
-vim.cmd('set smartindent') -- smart autoindenting when starting a new line
+vim.opt.smartindent = true -- smart autoindenting when starting a new line
 
 vim.opt.ignorecase = true -- ignore case when searching
 vim.opt.infercase = true  -- adjust case of match depending on the typed text when doing keyword completion in insert mode
