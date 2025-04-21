@@ -13,8 +13,6 @@ Plug 'neovim/nvim-lspconfig'
 -- Adds extra functionality over rust analyzer
 Plug 'simrat39/rust-tools.nvim'
 
-Plug 'rust-lang/rust.vim'
-
 -- Autocompletion
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -74,9 +72,6 @@ cmp.setup({
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-
-vim.cmd('let g:rustfmt_autosave = 1') -- run rustfmt on save, provided by rust.vim 
-
 vim.cmd('nnoremap <silent> ga    <cmd>lua vim.lsp.buf.code_action()<CR>')
 
 -- more natural navigation for wrapped lines
@@ -90,3 +85,14 @@ vim.opt.smartindent = true -- smart autoindenting when starting a new line
 vim.opt.ignorecase = true -- ignore case when searching
 vim.opt.infercase = true  -- adjust case of match depending on the typed text when doing keyword completion in insert mode
 vim.opt.smartcase = true  -- ignore case if search pattern is lowercase, case-sensitive otherwise
+
+-- format on save
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      callback = function()
+        vim.lsp.buf.format { bufnr = args.buf, id = args.data.client_id }
+      end,
+    })
+  end
+})
